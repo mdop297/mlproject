@@ -17,5 +17,5 @@ logging.basicConfig(
 
 )
 
-makelog = logging.getLogger("mlproject")
+log = logging.getLogger("mlproject")
 
