@@ -2,6 +2,7 @@ import os
 import sys
 from mlproject.exceptions import CustomException
 from mlproject.logger import log
+from mlproject.components.data_transformation import DataTransformation
 import pandas as pd
 
 from sklearn.model_selection import train_test_split
@@ -41,8 +42,8 @@ if __name__=="__main__":
     obj=DataIngestion()
     train_data,test_data=obj.initiate_data_ingestion()
 
-    # data_transformation=DataTransformation()
-    # train_arr,test_arr,_=data_transformation.initiate_data_transformation(train_data,test_data)
+    data_transformation=DataTransformation()
+    train_arr,test_arr,_=data_transformation.initiate_data_transformation(train_data,test_data)
 
     # modeltrainer=ModelTrainer()
     # print(modeltrainer.initiate_model_trainer(train_arr,test_arr))
